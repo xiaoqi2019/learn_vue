@@ -1,17 +1,27 @@
+<!--template用户展示给用户，相当于MVVM中的V-->
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!--在父组件中给子组件传值-->
+    <HelloWorld msg="欢迎来到星辰的天空"/>
+    <greeting message="你好" name="星辰"/>
+    <ProjectsList></ProjectsList>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  // 导入子组件
+  import HelloWorld from './components/HelloWorld.vue'
+  import greeting from "./components/greeting"
+  import ProjectsList from "./components/ProjectsList";
 
 export default {
+  // 定义组件名称
   name: 'App',
-  components: {
-    HelloWorld
+  components: {  // 声明子组件
+    HelloWorld,
+    greeting,
+    ProjectsList
   }
 }
 </script>
