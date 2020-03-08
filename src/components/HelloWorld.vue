@@ -6,6 +6,7 @@
 <!--    <p>黄河入海流</p>-->
 <!--    <p>欲穷千里目</p>-->
 <!--    <p>更上一层楼</p>-->
+    <p>{{title}}</p>
   </div>
 </template>
 
@@ -13,7 +14,8 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+    title:Number
   }
 }
 </script>
