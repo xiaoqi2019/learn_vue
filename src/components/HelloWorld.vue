@@ -7,16 +7,56 @@
 <!--    <p>欲穷千里目</p>-->
 <!--    <p>更上一层楼</p>-->
     <p>{{title}}</p>
+
+<!--    <el-image :src="url" fit="cover">-->
+<!--    </el-image>-->
+    <slot></slot>
+
+    <slot>
+      <p>让我们一起学猫叫</p>
+    </slot>
+
+    <slot name="part1"></slot>
+
+    <slot name="part2"></slot>
+
+    <slot name="part3"></slot>
+
+<!--    作用域-->
+    <slot name="part4" :user="username"></slot>
+    <slot name="part5" :user="user"></slot>
+    <slot name="part6" user="七七"></slot>
+    <slot name="part7" user="小白"></slot>
   </div>
 </template>
 
 <script>
-export default {
+  import {dogs} from "../api/api";
+
+  export default {
   name: 'HelloWorld',
   props: {
     msg: String,
-    title:Number
-  }
+    title: Number
+  },
+  data() {
+    return {
+      url:'',
+      username:'木子',
+      user:'星辰'
+    }
+  },
+  mounted(){
+    dogs()
+    .then( response => {
+        console.log(response);
+        console.log(response.data);
+        this.url = response.data.message;
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
+  },
 }
 </script>
 

@@ -8,7 +8,18 @@
 <!--    <ProjectsList></ProjectsList>-->
 <!--    <TableList/>-->
 <!--    <Login/>-->
-    <Login2/>
+<!--    <Login2/>-->
+
+    <ul>
+      <li><router-link :to="{ name:'home' }">主页</router-link></li>
+      <li><router-link :to="{ name:'greeting', params: {username:'snow'}}">欢迎页面</router-link></li>
+      <li><router-link to='/login'>登录1</router-link></li>
+      <li><router-link to="/login2">登录2</router-link></li>
+      <li><router-link to="/project_list">项目列表</router-link></li>
+      <li><router-link to="/table_list">表单列表</router-link></li>
+    </ul>
+<!--    展示路由的页面内容-->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -19,7 +30,7 @@
   // import ProjectsList from "./components/ProjectsList";
   // import TableList from "./components/TableList";
   // import Login from "./components/Login";
-  import Login2 from "./components/Login2";
+  // import Login2 from "./components/Login2";
 
 export default {
   // 定义组件名称
@@ -30,7 +41,7 @@ export default {
     // ProjectsList,
     // TableList,
     // Login,
-    Login2,
+    // Login2,
   },
   data(){
     return{

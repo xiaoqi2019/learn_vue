@@ -21,8 +21,8 @@
         name: "Login",
         data(){
             return{
-                username:"snow",
-                password:"123456"
+                username:"",
+                password:""
             }
         }
     }

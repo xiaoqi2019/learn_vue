@@ -11,6 +11,9 @@
         </el-form>
         <p>输入用户名：{{ruleForm.username}}</p>
         <p>输入密码：{{ruleForm.password}}</p>
+        <p>------------------------------</p>
+<!--        展示路由的页面内容-->
+        <router-view></router-view>
     </div>
 </template>
 

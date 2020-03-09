@@ -31,6 +31,7 @@
                 Clear selection
             </el-button>
         </div>
+        <p>{{this.$route.params.id}}</p>
     </div>
 </template>
 
@@ -63,6 +64,6 @@
 
 <style scoped>
     .project_list_new{
-        margin: 50px 500px;
+        margin: 50px 30%;
     }
 </style>
